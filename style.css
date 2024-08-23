@@ -1,0 +1,40 @@
+body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .neon-text {
+            font-size: 60px;
+            color: #fff;
+            text-shadow:
+                0 0 10px #00e6ff,
+                0 0 20px #00e6ff,
+                0 0 30px #00e6ff,
+                0 0 40px #00e6ff,
+                0 0 50px #00e6ff,
+                0 0 60px #00e6ff,
+                0 0 70px #00e6ff;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow:
+                    0 0 5px #00e6ff,
+                    0 0 10px #00e6ff,
+                    0 0 15px #00e6ff,
+                    0 0 20px #00e6ff,
+                    0 0 25px #00e6ff,
+                    0 0 30px #00e6ff,
+                    0 0 35px #00e6ff;
+            }
+
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
